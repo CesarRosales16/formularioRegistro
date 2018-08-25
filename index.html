@@ -4,9 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Formulario de Registro</title>
 </head>
 <body>
-    
+    <header>
+        <h1><center>Formulario de Registro</center></h1>
+    </header>
+
+    <form action="index.html" method="POST">
+        <fieldset>
+            <div>
+            <fieldset>
+                
+                <legend>Información personal</legend>                
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Alan" required pattern="[a-zA-Z]{3,25}">
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="apellido" name="apellido" placeholder="Brito" required pattern="[a-zA-Z]{3,25}">
+                <br> <br>
+                <label for="fechaNac">Fecha de nacimiento: </label>
+                <input type="date" id="fechaNac" name="fechaNac" required>
+                <label for="animalFav">Animal favorito </label>
+                <select name="animalFav" id="animalFav" required>
+                    <option value="">Animal...</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Tortuga">Tortuga</option>
+                    <option value="Leon">Leon</option>
+                    <option value="Tigre">Tigre</option>
+                    <option value="Pez">Pez</option>
+                    <option value="Hamster">Hamster</option>
+                    <option value="Cocodrilo">Cocodrilo</option>
+                    <option value="Tiburon">Tiburón</option>
+                    <option value="Delfin">Delfin</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </fieldset>
+        </div>
+            <br>
+            <div>
+            <fieldset>
+                <legend>Información de la cuenta </legend>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="ejemplo@ejemplo.com" required>
+                <br> <br>
+                <label for="contra">Contraseña: </label>
+                <input type="password" name="contra" id="contra" required pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{5,12}" title="Debe contener al menos un número, una letra mayuscula y debe tener entre 5 y 12 caracteres">
+                <br> <br>
+                <label for="verContra">Verificar contraseña: </label>
+                <input type="password" name="verContra" id="verContra" required pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{5,12}" title="Debe contener al menos un número, una letra mayuscula y debe tener entre 5 y 12 caracteres">
+            </fieldset>
+        </div>
+            <br>
+            <div>
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <label for="direccion"> Dirección: </label>
+                    <input type="text" name="direccion" id="direccion" placeholder="Avenida Revolución, colonia Chiltiupan" required>
+                    <br> <br>
+                    <label for="pais">País </label>
+                    <select name="pais" id="pais" required>
+                        <option value="">País...</option>
+                        <option value="AFG">Afganistan</option>
+                        <option value="ALB">Albania</option>
+                        <option value="DZA">Argelia</option>
+                        <option value="ATG">Antigua y Barbuda</option>
+                        <option value="ARG">Argentina</option>
+                        <option value="BHS">Bahamas</option>
+                        <option value="BDD">Bangladesh</option>
+                        <option value="BRB">Barbados</option>
+                        <option value="BEL">Belgica</option>
+                        <option value="BOl">Bolivia</option>                   
+                        <option value="CHL">Chile</option>
+                        <option value="CHN">China</option>                        
+                        <option value="DOM">República Dominicana</option>                        
+                        <option value="ECU">Ecuador</option>
+                        <option value="EGY">Egipto</option>
+                        <option value="SLV">El Salvador</option>
+                        <option value="USA">Estados Unidos</option>                        
+                    </select>
+                    <label for="ciudad">Ciudad: </label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="San Salvador" required">                    
+                    <br><br>
+                    <label for="telefono">Número de teléfono: </label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="22577777" required>
+                </fieldset>
+            </div>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
